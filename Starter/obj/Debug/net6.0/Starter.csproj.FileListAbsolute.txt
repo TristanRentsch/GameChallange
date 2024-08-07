@@ -12,3 +12,4 @@ C:\Users\tarbo\Documents\Projects\GameChallange\starter\obj\Debug\net6.0\refint\
 C:\Users\tarbo\Documents\Projects\GameChallange\starter\obj\Debug\net6.0\Starter.pdb
 C:\Users\tarbo\Documents\Projects\GameChallange\starter\obj\Debug\net6.0\Starter.genruntimeconfig.cache
 C:\Users\tarbo\Documents\Projects\GameChallange\starter\obj\Debug\net6.0\ref\Starter.dll
+C:\Users\tarbo\Documents\Projects\GameChallange\starter\obj\Debug\net6.0\Starter.sourcelink.json

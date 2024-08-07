@@ -27,12 +27,27 @@ int food = 0;
 InitializeGame();
 while (!shouldExit)
 {
-    if(TerminalResized()){
+    if (TerminalResized())
+    {
         Console.Clear();
         Console.WriteLine("Console was resized. Program exiting.");
         break;
     }
-    Move();
+    if (player.Equals(states[1])){
+        Move(speed: 2);
+    }
+    else if (player.Equals(states[2])){
+        FreezePlayer();
+    }
+    else{
+        Move();
+    }
+}
+
+//Returns true if player can eat food
+bool canEat()
+{
+    return (playerX >= foodX && playerX <= foodX + 5 && playerY == foodY);
 }
 
 // Returns true if the Terminal was resized 
@@ -72,7 +87,7 @@ void FreezePlayer()
 }
 
 // Reads directional input from the Console and moves the player
-void Move(bool terminateOnKeypress = false)
+void Move(bool terminateOnKeypress = false, int speed = 5)
 {
     int lastX = playerX;
     int lastY = playerY;
@@ -86,19 +101,18 @@ void Move(bool terminateOnKeypress = false)
             playerY++;
             break;
         case ConsoleKey.LeftArrow:
-            playerX--;
+            playerX -= speed;
             break;
         case ConsoleKey.RightArrow:
-            playerX++;
+            playerX += speed;
             break;
         case ConsoleKey.Escape:
             shouldExit = true;
-            Console.Clear();
             break;
         default:
             if (terminateOnKeypress)
                 shouldExit = true;
-                Console.Clear();
+            Console.Clear();
             break;
     }
 
@@ -113,9 +127,17 @@ void Move(bool terminateOnKeypress = false)
     playerX = (playerX < 0) ? 0 : (playerX >= width ? width : playerX);
     playerY = (playerY < 0) ? 0 : (playerY >= height ? height : playerY);
 
-    // Draw the player at the new location
-    Console.SetCursorPosition(playerX, playerY);
-    Console.Write(player);
+    if (canEat())
+    {
+        ChangePlayer();
+        ShowFood();
+    }
+    else
+    {
+        // Draw the player at the new location
+        Console.SetCursorPosition(playerX, playerY);
+        Console.Write(player);
+    }
 }
 
 // Clears the console, displays the food and player
