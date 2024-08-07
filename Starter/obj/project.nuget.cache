@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N18MAAEokiEct4UKvD6dfAmGDAU1WNg4VR85VDgWHnF7Gbv6ipY6ItWKClthLbXA8aLMZHRGyT1opHkkzx3+bw==",
+  "dgSpecHash": "g6vcZsxWtf3NSY4LafKS2uI3C4Qdnyg6T7h7jULOFOmuy0VF5Uly6JcjUZYfbirE5kvae2eU+MZmPKp0sC0x6A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tarbo\\Documents\\Projects\\GameChallange\\Starter\\Starter.csproj",
+  "projectFilePath": "C:\\Users\\tarbo\\Documents\\Projects\\GameChallange\\starter\\Starter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tarbo\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
     "C:\\Users\\tarbo\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
